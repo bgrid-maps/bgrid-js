@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bgrid-js quick test</title>
+  </head>
+  <body>
+    <h1>bgrid-js UMD smoke test</h1>
+    <pre id="out"></pre>
+    <script src="./dist/bgrid.umd.js"></script>
+    <script>
+      (async function(){
+        const out = document.getElementById('out');
+        const grid = BGrid.coordsToBGrid(40.4168, -3.7038, 4);
+        const cell = BGrid.bgridToCell(grid);
+        // example.html lives inside ./bgrid-js, so override basePath
+        const es = await BGrid.loadLanguage('es', { basePath: './bip39-wordlist' });
+        out.textContent = [
+          'grid: ' + JSON.stringify(grid),
+          'center: ' + JSON.stringify({ lat: cell.lat, lon: cell.lon }),
+          'words: ' + BGrid.gridToDisplay(grid, { mode: 'words', words: es })
+        ].join('\n');
+      })();
+    </script>
+  </body>
+</html>
