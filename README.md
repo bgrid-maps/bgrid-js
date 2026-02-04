@@ -54,3 +54,6 @@ UMD:
 - `gridToDisplay(gridArray, { mode: 'numbers'|'words', words? }): string`
 
 Supported languages: `en`, `es`, `fr`, `pt`, `zh`.
+
+## LICENSE
+MIT
