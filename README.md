@@ -8,13 +8,19 @@ A tiny JavaScript library to work with BGrid indexes (coords <-> grid), plus hel
 
 Note: In this repo the BIP39 lists live under `bip39-wordlist`. The library defaults to that path.
 
+## Install
+
+```bash
+npm install @bgrid/bgrid-js
+```
+
 ## Quick start
 
 ES modules:
 
 ```html
 <script type="module">
-  import { coordsToBGrid, bgridToCell, loadLanguage, gridToDisplay } from './bgrid-js/dist/bgrid.mjs';
+  import { coordsToBGrid, bgridToCell, loadLanguage, gridToDisplay } from '@bgrid/bgrid-js';
 
   const grid = coordsToBGrid(40.4168, -3.7038, 4); // Madrid, 4 levels
   console.log('BGrid:', grid);
@@ -31,7 +37,7 @@ ES modules:
 UMD:
 
 ```html
-<script src="./bgrid-js/dist/bgrid.umd.js"></script>
+<script src="node_modules/@bgrid/bgrid-js/dist/bgrid.umd.js"></script>
 <script>
   const grid = BGrid.coordsToBGrid(40.4168, -3.7038, 4);
   const cell = BGrid.bgridToCell(grid);

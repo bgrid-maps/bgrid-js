@@ -1,0 +1,27 @@
+{
+  "name": "@bgrid/bgrid-js",
+  "version": "0.1.0",
+  "description": "Tiny JS library to work with BGrid indexes (coords <-> grid), plus helpers to format using BIP39 wordlists.",
+  "license": "MIT",
+  "main": "dist/bgrid.umd.js",
+  "module": "dist/bgrid.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/bgrid.mjs",
+      "require": "./dist/bgrid.umd.js"
+    }
+  },
+  "files": [
+    "dist",
+    "bip39-wordlist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "bgrid",
+    "geocoding",
+    "grid",
+    "bip39"
+  ],
+  "sideEffects": false
+}
